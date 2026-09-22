@@ -3,6 +3,7 @@ import { Save } from "lucide-react";
 import { BOOT_ART, preloadArt } from "@/game/art";
 import { captureSave, writeResume } from "@/game/saves";
 import { useGame } from "@/game/store";
+import { registerPwa } from "@/pwa";
 import { ErrorReset } from "./ErrorReset";
 import { ActivePanel } from "./panels";
 import { Dock, StatusBar, Toast } from "./chrome";
@@ -40,6 +41,10 @@ function GameShell() {
   const hydrated = useGame((s) => s.hydrated);
   const [ready, setReady] = useState(() => useGame.getState().hydrated);
   const [bootKey, setBootKey] = useState(0);
+
+  useEffect(() => {
+    registerPwa();
+  }, []);
 
   useEffect(() => {
     if (useGame.getState().hydrated) {

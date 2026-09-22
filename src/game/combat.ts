@@ -506,7 +506,7 @@ export function performTame(
     pushFx(battle, "tame", actor, [target.id], [{ targetId: target.id, text: "馴服" }]);
     return true;
   }
-  pushLog(battle, `${target.name} 挪扎著拒絕了。再試一次。`);
+  pushLog(battle, `${target.name} 掙扎著拒絕了。再試一次。`);
   pushFx(battle, "tame", actor, [target.id], [{ targetId: target.id, text: "失敗", miss: true }]);
   return false;
 }

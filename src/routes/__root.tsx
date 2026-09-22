@@ -1,6 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
+import { assetUrl } from "@/lib/asset";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "霧谷傳說";
@@ -13,15 +14,16 @@ export const Route = createRootRoute({
       { title: APP_NAME },
       { name: "description", content: "回合制角色扮演：三種職業、裝備強化、馴服魔物，走進被霧吞沒的山谷。" },
       { name: "theme-color", content: "#0a0c0b" },
+      { name: "apple-mobile-web-app-title", content: APP_NAME },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/svg+xml", href: assetUrl("favicon.svg") },
       { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
-      { rel: "preload", as: "image", href: "/art/title.jpg" },
+      { rel: "manifest", href: assetUrl("manifest.webmanifest") },
+      { rel: "apple-touch-icon", href: assetUrl("icons/icon-192.png") },
+      { rel: "preload", as: "image", href: assetUrl("art/title.jpg") },
     ],
   }),
   component: () => (

@@ -3,6 +3,7 @@ import { Backpack, Map as MapIcon, Save, Swords, Users } from "lucide-react";
 import { CLASSES, ITEMS, LOCATIONS, hasCrystals, xpToNext } from "@/game/data";
 import { deriveHeroStats } from "@/game/combat";
 import { cn } from "@/lib/utils";
+import { assetUrl } from "@/lib/asset";
 import { heroPortrait, useGame } from "@/game/store";
 import type { Panel } from "@/game/types";
 
@@ -94,7 +95,7 @@ export function Portrait({
 }) {
   return (
     <img
-      src={src}
+      src={assetUrl(src)}
       alt={alt}
       decoding={priority ? "sync" : "async"}
       fetchPriority={priority ? "high" : "auto"}
@@ -113,7 +114,7 @@ export function Portrait({
 export function SceneImage({ src, priority }: { src: string; priority?: boolean }) {
   return (
     <img
-      src={src}
+      src={assetUrl(src)}
       alt=""
       decoding={priority ? "sync" : "async"}
       fetchPriority={priority ? "high" : "low"}

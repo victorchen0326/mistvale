@@ -34,7 +34,7 @@ export function TitleScreen() {
         <p className="font-display text-sm tracking-[0.35em] text-accent">MISTVALE</p>
         <h1 className="font-display text-5xl font-semibold leading-none sm:text-6xl">霧谷傳說</h1>
         <p className="max-w-md text-sm leading-relaxed text-muted">
-          山谷被霧吞了三個月。取回三枚霧晶，馳服願意跟隨的生靈，把裂縫重新封上。
+          山谷被霧吞了三個月。取回三枚霧晶，馴服願意跟隨的生靈，把裂縫重新封上。
         </p>
         <div className="flex w-full max-w-sm flex-col gap-2">
           <GButton variant={canContinue ? "primary" : "ghost"} wide onClick={continueGame} disabled={!hydrated || !canContinue}>
@@ -263,7 +263,7 @@ export function WorldScreen() {
             </p>
           ) : locationId === "lake" ? (
             <p className="mt-2 text-xs text-muted">
-              {haveBough ? "湖心空了。靈枝已取走。" : "湖心竪著一件發白的物體。"}
+              {haveBough ? "湖心空了。靈枝已取走。" : "湖心豎著一件發白的物體。"}
             </p>
           ) : null}
           {activeHere.length > 0 ? (
@@ -512,7 +512,7 @@ export function BattleScreen() {
               <GButton onClick={() => setBattleMenu("items")}>道具</GButton>
               <GButton onClick={battleDefend}>防禦</GButton>
               <GButton disabled={!canTame} onClick={() => chooseBattle({ type: "tame" })}>
-                馳服
+                馴服
               </GButton>
             </div>
           )}

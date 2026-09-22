@@ -1,3 +1,5 @@
+import { assetUrl } from "@/lib/asset";
+
 const seen = new Set<string>();
 
 export function preloadArt(...urls: Array<string | null | undefined>) {
@@ -7,7 +9,7 @@ export function preloadArt(...urls: Array<string | null | undefined>) {
     seen.add(url);
     const img = new Image();
     img.decoding = "async";
-    img.src = url;
+    img.src = assetUrl(url);
   }
 }
 

@@ -3,6 +3,7 @@ node_modules/
 .vercel/
 .tanstack/
 dist/
+dist-pages/
 screenshots/
 artifacts/
 .grok/
@@ -12,3 +13,5 @@ artifacts/
 .DS_Store
 .env
 .env.*
+AGENTS.md
+AGENTS.project.md

@@ -551,11 +551,11 @@ export const useGame = create<GameApi>()(
         if (!atAltar && !atLake) return;
         const q = s.quests?.lake_bough;
         if (!q || q.status === "done") {
-          set({ toast: atLake ? "湖心只剩漿漿。" : "先到公佈欄接下長老的委託。" });
+          set({ toast: atLake ? "湖心只剩漣漪。" : "先到公佈欄接下長老的委託。" });
           return;
         }
         if (s.flags.tookBough || countItem(s.inventory, "holy_bough") > 0) {
-          set({ toast: "湖心只剩漿漿。靈枝已經在你手上。" });
+          set({ toast: "湖心只剩漣漪。靈枝已經在你手上。" });
           return;
         }
         if (atAltar) {

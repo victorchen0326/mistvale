@@ -177,7 +177,7 @@ export function PartyPanel() {
       </div>
       <h3 className="mb-2 text-sm text-muted">同伴（出戰一位）</h3>
       {pets.length === 0 ? (
-        <p className="text-sm text-muted">尚未馳服任何魔物。戰鬥中削弱後可嘗試馳服。</p>
+        <p className="text-sm text-muted">尚未馴服任何魔物。戰鬥中削弱後可嘗試馴服。</p>
       ) : (
         <ul className="space-y-2">
           {pets.map((p) => {

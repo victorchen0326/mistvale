@@ -142,10 +142,14 @@ function authPopupPlugin(): Plugin {
   };
 }
 
+const pagesBuild = process.env.PAGES_BUILD === "1";
+const pagesBase = "/mistvale/";
+
 // `0.0.0.0:8080` is the live-preview contract — don't change host/port.
 // The dev server starts once `src/router.tsx` and `src/routes/` exist — see
 // AGENTS.md § "First scaffold".
 export default defineConfig(({ command, isPreview }) => ({
+  base: pagesBuild ? pagesBase : "/",
   server: {
     host: "0.0.0.0",
     port: 8080,
@@ -166,8 +170,15 @@ export default defineConfig(({ command, isPreview }) => ({
     // PWA head + ?install=1 tutorial page; runs before Start/Nitro.
     grokPwaPlugin(),
     tailwindcss(),
-    tanstackStart(),
-    ...(command === "build" || isPreview
+    tanstackStart(
+      pagesBuild
+        ? {
+            spa: { enabled: true },
+            router: { basepath: "/mistvale" },
+          }
+        : {},
+    ),
+    ...((command === "build" || isPreview) && !pagesBuild
       ? [
           nitro({
             preset: "vercel",
@@ -181,3 +192,4 @@ export default defineConfig(({ command, isPreview }) => ({
     viteReact(),
   ],
 }));
+

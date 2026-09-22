@@ -216,8 +216,8 @@ export const SKILLS: Record<string, SkillDef> = {
   },
   tame_art: {
     id: "tame_art",
-    name: "馳獸術",
-    desc: "本回合大幅提升下一次馳服機率。",
+    name: "馴獸術",
+    desc: "本回合大幅提升下一次馴服機率。",
     mp: 6,
     kind: "utility",
     power: 0,
@@ -405,7 +405,7 @@ export const SKILLS: Record<string, SkillDef> = {
   roar: {
     id: "roar",
     name: "霧吼",
-    desc: "震懼全場，降低速度。",
+    desc: "震懾全場，降低速度。",
     mp: 0,
     kind: "debuff",
     power: 0.6,
@@ -456,7 +456,7 @@ export const MONSTERS: Record<string, MonsterDef> = {
     id: "slime",
     name: "綠史萊姆",
     portrait: "/art/slime.jpg",
-    blurb: "霧谷最常見的黏團。意外地親人，容易馳服。",
+    blurb: "霧谷最常見的黏團。意外地親人，容易馴服。",
     stats: { hp: 32, mp: 8, atk: 8, mag: 4, def: 4, spd: 6 },
     skills: ["goo"],
     xp: 16,
@@ -498,7 +498,7 @@ export const MONSTERS: Record<string, MonsterDef> = {
     id: "bat",
     name: "洞穴蝙蝠",
     portrait: "/art/bat.jpg",
-    blurb: "在岩頂倒掛的聽風者。馳服後能替你探路。",
+    blurb: "在岩頂倒掛的聽風者。馴服後能替你探路。",
     stats: { hp: 36, mp: 16, atk: 9, mag: 10, def: 4, spd: 16 },
     skills: ["screech", "drain"],
     xp: 20,
@@ -511,7 +511,7 @@ export const MONSTERS: Record<string, MonsterDef> = {
     id: "skeleton",
     name: "骸骨衛兵",
     portrait: "/art/skeleton.jpg",
-    blurb: "仍守著無人記得的誓言。無法馳服。",
+    blurb: "仍守著無人記得的誓言。無法馴服。",
     stats: { hp: 62, mp: 8, atk: 15, mag: 4, def: 11, spd: 7 },
     skills: ["bone_slash"],
     xp: 34,
@@ -634,8 +634,8 @@ export const ITEMS: Record<string, ItemDef> = {
   },
   whistle: {
     id: "whistle",
-    name: "馳獸笛",
-    desc: "戰鬥中使用，大幅提升本次馳服機率。",
+    name: "馴獸笛",
+    desc: "戰鬥中使用，大幅提升本次馴服機率。",
     kind: "consumable",
     price: 80,
     sell: 30,
@@ -846,7 +846,7 @@ export const ITEMS: Record<string, ItemDef> = {
   holy_bough: {
     id: "holy_bough",
     name: "清輝靈枝",
-    desc: "湖心竪著的潔白樹枝。日光與月華滲在木理裡，霧不敢靠近。",
+    desc: "湖心豎著的潔白樹枝。日光與月華滲在木理裡，霧不敢靠近。",
     kind: "key",
     price: 0,
     sell: 0,
@@ -969,7 +969,7 @@ export function shopUnlockNotes(prevLevel: number, nextLevel: number, flags: Rec
 export const QUESTS: Record<string, QuestDef> = {
   slime_hunt: {
     id: "slime_hunt",
-    title: "林間清割",
+    title: "林間清剿",
     poster: "東田農戶",
     desc: "史萊姆爬進了菜圃。請在迷霧森林擊敗三隻綠史萊姆。",
     hint: "迷霧森林探索即可遭遇。",
@@ -1042,8 +1042,8 @@ export const QUESTS: Record<string, QuestDef> = {
     id: "tame_slime",
     title: "黏液同伴",
     poster: "孩子們",
-    desc: "想看一隻溫馴的綠史萊姆。請馳服一隻並帶回村子。",
-    hint: "把史萊姆打到半血以下再馳服。遊俠較容易成功。",
+    desc: "想看一隻溫馴的綠史萊姆。請馴服一隻並帶回村子。",
+    hint: "把史萊姆打到半血以下再馴服。遊俠較容易成功。",
     reward: 60,
     kind: "tame",
     targetId: "slime",
@@ -1055,7 +1055,7 @@ export const QUESTS: Record<string, QuestDef> = {
     title: "月下締約",
     poster: "守夜人",
     desc: "若有霧狼願意跟隨，村子夜間會安全許多。",
-    hint: "迷霧森林，半血後馳服。",
+    hint: "迷霧森林，半血後馴服。",
     reward: 90,
     kind: "tame",
     targetId: "wolf",
@@ -1066,7 +1066,7 @@ export const QUESTS: Record<string, QuestDef> = {
     id: "lake_bough",
     title: "清輝湖的樹枝",
     poster: "長老艾爾德",
-    desc: "暮光祭壇那塊地裡有一座湖，時常同時被日光與月光照著，霧不敢侵。請到湖心查看竪在水裡的物體，把見聞帶回村子。",
+    desc: "暮光祭壇那塊地裡有一座湖，時常同時被日光與月光照著，霧不敢侵。請到湖心查看豎在水裡的物體，把見聞帶回村子。",
     hint: "在暮光祭壇走向清輝湖，再走到湖心。",
     reward: 120,
     kind: "visit",
@@ -1181,7 +1181,7 @@ export const LOCATIONS: Record<string, LocationDef> = {
   lake: {
     id: "lake",
     name: "清輝湖",
-    blurb: "霧在岸邊停住。湖面同時映著太陽與月亮，中央竪著一根發白的東西。",
+    blurb: "霧在岸邊停住。湖面同時映著太陽與月亮，中央豎著一根發白的東西。",
     scene: "/art/lake.jpg",
     connected: ["altar"],
   },
@@ -1241,13 +1241,13 @@ export const AREA_HUNTS: Record<string, AreaHuntDef> = {
       "一具鹿屍被巨大牙印撕開，脊骨幾乎咬碎，不像普通霧狼做得來。",
       "古樹幹上有被利爪刨開的深痕，樹汁還是濕的，高度超過人頭。",
       "空氣裡全是潮濕的獸息。林線外有什麼東西在繞圈，步距很長。",
-      "遠處傳來低沈的嚎聲，回音把霧震出一圈波紋——那不是一隻尋常的狼。",
+      "遠處傳來低沉的嚎聲，回音把霧震出一圈波紋——那不是一隻尋常的狼。",
     ],
     nestFoundText: "灌木被整片壓平。你循著焦土與爪痕走進谷底——找到霧牙巨狼的巢穴了。",
     nestEnter: [
       {
         speaker: "旁白",
-        text: "巢裡的土是熱的。巨大的銀灰色身黨從霧裡站起來，眼睛像兩盎冷月。",
+        text: "巢裡的土是熱的。巨大的銀灰色身軀從霧裡站起來，眼睛像兩盞冷月。",
       },
       {
         speaker: "霧牙巨狼",
@@ -1264,7 +1264,7 @@ export const AREA_HUNTS: Record<string, AreaHuntDef> = {
     crystalDialogue: "cave_crystal",
     clues: [
       "岩壁上刮著整齊的刀痕，不像野獸，像舊兵器一次次試刃。",
-      "水滌裡沈著一節發白的指骨，比人類的粗一圈，關節處還有鏽甲殘片。",
+      "水窪裡沉著一節發白的指骨，比人類的粗一圈，關節處還有鏽甲殘片。",
       "風裡有腐鏽與乾屍的味道，越往深處越濃，連火把都發青。",
       "地上散落破損的盾片，紋章已被時間吃掉，卻仍圍成一圈崗位。",
       "遠處鎧甲碰撞，節奏慢得不像活人——有什麼東西還在站崗。",
@@ -1273,7 +1273,7 @@ export const AREA_HUNTS: Record<string, AreaHuntDef> = {
     nestEnter: [
       {
         speaker: "旁白",
-        text: "洞穴最深處，一具過高的骸骨坐在浸水的石座上。它站起來時，頭盔磊到了頂岩。",
+        text: "洞穴最深處，一具過高的骸骨坐在浸水的石座上。它站起來時，頭盔磕到了頂岩。",
       },
       {
         speaker: "深淵骨王",
@@ -1293,7 +1293,7 @@ export const AREA_HUNTS: Record<string, AreaHuntDef> = {
       "柱影會自己移動。燈後有腳步，卻看不見人。",
       "空氣發苦。舌尖有金屬與藥草混在一起的味道，是術者常用的底料。",
       "牆上的壁畫被挖去五官，只留下黑洞。有人在抹去名字。",
-      "耳邊有低語，內容聽不清，卻一直反復喊你的名字——像在試探你是不是活人。",
+      "耳邊有低語，內容聽不清，卻一直反覆喊你的名字——像在試探你是不是活人。",
     ],
     nestFoundText: "內殿的帷幔被抽走。咒陣中央空出一個巢——找到暗影術士的巢穴了。",
     nestEnter: [
@@ -1311,17 +1311,17 @@ export const AREA_HUNTS: Record<string, AreaHuntDef> = {
     crystalFlag: "dragonDefeated",
     clearedText: "結界已散。",
     clues: [
-      "石坪被燒成玻璃狀，鞋底還發燻。那不是營火能留下的痕跡。",
+      "石坪被燒成玻璃狀，鞋底還發燙。那不是營火能留下的痕跡。",
       "比人還長的爪痕把祭壇階梯剖開，深可見骨白的巖心。",
       "空氣裡有硫與舊鐵的氣味。霧在裂縫口轉成螺旋，像被什麼吸進去。",
       "一塊巨鱗嵌進岩石，月光下像浸過銀，邊緣還在滴著未乾的熱霧。",
-      "遠處傳來比雷還低的呼吸，整座臺地都震出一層塵——它就在裂縫裡。",
+      "遠處傳來比雷還低的呼吸，整座臺地都震出一層塵——牠就在裂縫裡。",
     ],
     nestFoundText: "裂縫擴大成巢口。鱗片的弧光在裡面翻動——找到暮霧巨龍的巢穴了。",
     nestEnter: [
       {
         speaker: "旁白",
-        text: "三枚霧晶的記憶在巢口共鳴。暮霧裂開。一頭龍從雲裡落下，鱗片像浸透月光的鐵。它身上壓著固定的 50 級威壓，結界把尋常兵器都折成薄霧。",
+        text: "三枚霧晶的記憶在巢口共鳴。暮霧裂開。一頭龍從雲裡落下，鱗片像浸透月光的鐵。牠身上壓著固定的 50 級威壓，結界把尋常兵器都折成薄霧。",
       },
       {
         speaker: "暮霧巨龍",
@@ -1404,7 +1404,7 @@ export const DIALOGUES: Record<string, DialogueDef> = {
       {
         speaker: "長老",
         portrait: "/art/elder.jpg",
-        text: "路上若遇見願意跟隨的生靈，不妨伸出手。霧谷的魔物會與你一同變強——你長一歲，它們也長一歲。技能不是一開始就會，每五級左右會覺醒新的招式。旅店可以歇息，鐵匠能強化裝備。村口公佈欄也貼著委託。雜貨鋪的好貨，要等你通關對應地區、再長到足夠的等級才進店。",
+        text: "路上若遇見願意跟隨的生靈，不妨伸出手。霧谷的魔物會與你一同變強——你長一歲，牠們也長一歲。技能不是一開始就會，每五級左右會覺醒新的招式。旅店可以歇息，鐵匠能強化裝備。村口公佈欄也貼著委託。雜貨鋪的好貨，要等你通關對應地區、再長到足夠的等級才進店。",
       },
     ],
     effects: [{ type: "flag", flag: "questStarted" }],
@@ -1425,7 +1425,7 @@ export const DIALOGUES: Record<string, DialogueDef> = {
       {
         speaker: "長老",
         portrait: "/art/elder.jpg",
-        text: "三枚霧晶都齊了。祭壇會認你。那裡是第四個地區——跟蹤痕跡、湊齊線索，才能找到暮霧巨龍的巢。它固定 50 級，還會用迷霧結界偏折尋常兵器。等到四十級並且找到龍巢，公佈欄會多一張清輝湖的委託。那座湖就在祭壇臺地盡頭。",
+        text: "三枚霧晶都齊了。祭壇會認你。那裡是第四個地區——跟蹤痕跡、湊齊線索，才能找到暮霧巨龍的巢。牠固定 50 級，還會用迷霧結界偏折尋常兵器。等到四十級並且找到龍巢，公佈欄會多一張清輝湖的委託。那座湖就在祭壇臺地盡頭。",
       },
     ],
     effects: [{ type: "flag", flag: "altarUnlocked" }],
@@ -1468,7 +1468,7 @@ export const DIALOGUES: Record<string, DialogueDef> = {
     lines: [
       {
         speaker: "旁白",
-        text: "骨王的石座下，水池倒影裡，第二枚霧晶正慢慢旋轉。你把它撇起，掌心一片清冷。",
+        text: "骨王的石座下，水池倒影裡，第二枚霧晶正慢慢旋轉。你把它撈起，掌心一片清冷。",
       },
     ],
     effects: [
@@ -1530,12 +1530,12 @@ export const DIALOGUES: Record<string, DialogueDef> = {
       {
         speaker: "旁白",
         portrait: "/art/bough.jpg",
-        text: "中央竪著一根潔白的樹枝，沒有葉子，木理裡走著金與銀的細光。霧在三步外就散開，不敢靠近。",
+        text: "中央豎著一根潔白的樹枝，沒有葉子，木理裡走著金與銀的細光。霧在三步外就散開，不敢靠近。",
       },
       {
         speaker: "旁白",
         portrait: "/art/bough.jpg",
-        text: "觸手微熱。你把靈枝拔起，湖面只剩一圈慢慢合據的漿漿。",
+        text: "觸手微熱。你把靈枝拔起，湖面只剩一圈慢慢合攏的漣漪。",
       },
     ],
     effects: [
@@ -1593,7 +1593,7 @@ export const DIALOGUES: Record<string, DialogueDef> = {
       },
       {
         speaker: "旁白",
-        text: "龍不在眼前。像森林、洞穴與神殿一樣，你得跟著痕跡走，才能找到它的巢。",
+        text: "龍不在眼前。像森林、洞穴與神殿一樣，你得跟著痕跡走，才能找到牠的巢。",
       },
     ],
     effects: [{ type: "flag", flag: "altarIntro" }],
@@ -1612,7 +1612,7 @@ export const DIALOGUES: Record<string, DialogueDef> = {
     lines: [
       {
         speaker: "旁白",
-        text: "三枚霧晶嵌入石槽。暮霧裂開。一頭龍從雲裡落下，鱗片像浸透月光的鐵。它身上壓著固定的 50 級威壓，身周結界把尋常兵器折成三分之一，一半的攻擊會落空。",
+        text: "三枚霧晶嵌入石槽。暮霧裂開。一頭龍從雲裡落下，鱗片像浸透月光的鐵。牠身上壓著固定的 50 級威壓，身周結界把尋常兵器折成三分之一，一半的攻擊會落空。",
       },
       {
         speaker: "暮霧巨龍",
@@ -1627,7 +1627,7 @@ export const DIALOGUES: Record<string, DialogueDef> = {
     lines: [
       {
         speaker: "旁白",
-        text: "龍的身黨化作一場散去的霧。谷地第一次露出真正的晨光。",
+        text: "龍的身軀化作一場散去的霧。谷地第一次露出真正的晨光。",
       },
       {
         speaker: "長老",
